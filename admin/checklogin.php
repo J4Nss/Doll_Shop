@@ -13,9 +13,11 @@
   if($result_all){
     $_SESSION["user"] = $user;
     // print_r ($_SESSION["user"]);
-    session_write_close();
+    session_write_close(); ?>
+    <a href='logout.php'>Logout</a>
+    <?php
   }else {
-    header( "location: " );
+    header( "location:login.html" );
     exit(0);
   }
 ?>
