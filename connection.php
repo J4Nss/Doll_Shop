@@ -1,10 +1,10 @@
 <?php
 $serverName = "localhost";
 $userName = "root";
-$userPassword = "";
+$userPassword = "1234";
 $dbName = "doll_db";
 
-$conn = @mysqli_connect(
+$conn = mysqli_connect(
     $serverName,
     $userName,
     $userPassword,
@@ -16,5 +16,5 @@ $conn = @mysqli_connect(
 // }else{
 //     echo "Database Connected.";
 // }
-@mysqli_close($conn);
+
 ?>
