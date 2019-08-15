@@ -2,6 +2,6 @@
 session_start();
 session_destroy();
 
-header( "refresh:2;url=login.html" );
+header( "refresh:1;url=login.html" );
 
 ?>
