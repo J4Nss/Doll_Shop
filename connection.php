@@ -16,5 +16,5 @@ $conn = @mysqli_connect(
 // }else{
 //     echo "Database Connected.";
 // }
-@mysqli_close($conn);
+// @mysqli_close($conn);
 ?>
