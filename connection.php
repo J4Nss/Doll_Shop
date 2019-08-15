@@ -10,11 +10,11 @@ $conn = @mysqli_connect(
     $userPassword,
     $dbName
 );
-// if(@mysqli_connect_errno()){
-//     echo "Database Connect Failed : " . @mysqli_connect_error();
+if(@mysqli_connect_errno()){
+    echo "Database Connect Failed : " . @mysqli_connect_error();
 
-// }else{
-//     echo "Database Connected.";
-// }
-// @mysqli_close($conn);
+}else{
+    echo "Database Connected.";
+}
+
 ?>
