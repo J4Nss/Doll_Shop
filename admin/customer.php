@@ -9,6 +9,7 @@ if(empty($_SESSION["user"])){
 require("../connection.php");
 require("nav.php");
 }
-?>      
+?>   
+   
     </body>
 </html>
