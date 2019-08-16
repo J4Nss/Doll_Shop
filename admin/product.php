@@ -92,7 +92,7 @@
                   <td>".$dolls[$i]["in_stock"]."</td>
                   <td>
                     <a  href='edit_product.php?id_doll=".$dolls[$i]["Id_doll"]."'><i class='material-icons'>create</i></a>
-                    <i class='material-icons'>delete</i>
+                    <a  href='delete_product_by_id.php?id_doll=".$dolls[$i]["Id_doll"]."' onclick=\"return confirm('Are you sure to delete this product?')\"><i class='material-icons'>delete</i></a>
                   </td>
                 </tr>";
               }
