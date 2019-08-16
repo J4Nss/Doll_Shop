@@ -54,11 +54,10 @@
                 ?>
 							</div>
 							<div class="span3">
-								<form class="form-inline">
-									<label>Qty:</label>
-									<input type="text" class="span1" placeholder="1">
-									<button class="btn btn-inverse" type="submit">Add to order</button>
-								</form>
+							<form action="backend_order.php" method="post">
+							<?php echo "<input type='hidden' class='span1' name='id' value='".$result_all['Id_doll']."' >"; ?>
+							<input class="Success" type="submit" value="Add Order"/>
+							</form>
 							</div>							
 						</div>
 						

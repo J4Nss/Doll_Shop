@@ -21,6 +21,9 @@
 		<script src="themes/js/jquery.fancybox.js"></script>
   </header>
   <body>
-    <?php require "nav.php" ?>
+		<?php require "nav.php";
+		session_start();
+		session_destroy(); 
+		?>
   </body>
 </html>
