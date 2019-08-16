@@ -5,10 +5,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
   <nav class="navbar navbar-expand-lg navbar-light bg-light cus">
-<a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <img src="../img/logo_shop.png" class="logo">
+    <span class="shop_name">Teddy Shop</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
   <div class="collapse navbar-collapse taxt" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -35,13 +36,20 @@
 
 
 <style>
-            .cus{
-            background-color: #E0FFFF !important;
-            }
-            .taxt{
-              margin-left: 75%;
-            }
-            .dropdown-menu{
-              background-color: #E0FFFF !important;
-            }
-            </style>
+  .cus{
+    background-color: #E0FFFF !important;
+  }
+  .taxt{
+    margin-left: 63%;
+  }
+  .dropdown-menu{
+    background-color: #E0FFFF !important;
+  }
+  .logo {
+    width: 70px;
+  }
+  .shop_name {
+    font-weight: bold;
+    color: teal;
+  }
+</style>
