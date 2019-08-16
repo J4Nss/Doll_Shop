@@ -1,10 +1,10 @@
 <?php
-$serverName = "localhost";
+$serverName = "localhost"; 
 $userName = "root";
 $userPassword = "";
 $dbName = "doll_db";
 
-$conn = @mysqli_connect(
+$conn = mysqli_connect(
     $serverName,
     $userName,
     $userPassword,

@@ -16,6 +16,7 @@
   require("nav.php");
   } 
   ?>
+  <h2 class="title">Doll Stock</h2>
     <div class="row col-12">
       <h2 class="title">Doll Stock</h2>
       <div class="row col-12">
