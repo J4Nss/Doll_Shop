@@ -1,9 +1,10 @@
 <html>
   <header>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- for icon -->
   </header>
   <body>
   <?php session_start();
@@ -66,9 +67,9 @@
           </div>
         </div>
       </div>
-      <div class="row col-12 table_block">
+      <div class="row col-11 table_block">
         <table class="table table-striped">
-          <thead>
+          <thead class="head_row">
             <tr>
               <th scope="col">ID product</th>
               <th scope="col">Name</th>
@@ -89,6 +90,10 @@
                   <td>".$dolls[$i]["name"]."</td>
                   <td>".$dolls[$i]["price"]."</td>
                   <td>".$dolls[$i]["in_stock"]."</td>
+                  <td>
+                    <a  href='edit_product.php?id_doll=".$dolls[$i]["Id_doll"]."'><i class='material-icons'>create</i></a>
+                    <i class='material-icons'>delete</i>
+                  </td>
                 </tr>";
               }
             ?>
@@ -111,6 +116,7 @@
   .title {
     margin-left: 5%;
     margin-top: 2%;
+    color: #407373;
   }
   .add_block {
     margin-left: 90%;
@@ -118,5 +124,9 @@
   .table_block {
     margin-left: 5%;
     margin-top: 2%;
+  }
+  .head_row {
+    background-color: #7de3e3;
+    color: #407373;
   }
 </style>
