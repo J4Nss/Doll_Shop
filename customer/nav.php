@@ -18,7 +18,7 @@
 										echo $_SESSION["customer_username"];
 									?>
 								</a>
-								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<div class="dropdown-menu drop_menu" aria-labelledby="navbarDropdown">
 									<a class="dropdown-item" href="./logout.php">Logout</a>
 								</div>
 							</li>
@@ -44,6 +44,9 @@
 	}
 	.menu_block {
 		margin-top: 1%;
+	}
+	.drop_menu {
+		padding-left: 20%;
 	}
 </style>
 			
