@@ -1,7 +1,7 @@
 <?php
 $serverName = "localhost"; 
 $userName = "root";
-$userPassword = "";
+$userPassword = "1234";
 $dbName = "doll_db";
 
 $conn = mysqli_connect(
