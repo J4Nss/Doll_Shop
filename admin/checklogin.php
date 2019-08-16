@@ -1,6 +1,6 @@
 <?php
   require("../connection.php");
-  session_start();
+  
   $user = $_REQUEST["username"];
   $pass = $_REQUEST["password"];
   $sql = "SELECT 'username', 'password' from admin where username = '".$user."' and password = '".$pass."'";
@@ -11,11 +11,12 @@
 
 
   if($result_all){
+    session_start();
     $_SESSION["user"] = $user;
     // print_r ($_SESSION["user"]);
-    session_write_close(); ?>
-    <a href='logout.php'>Logout</a>
-    <?php
+    session_write_close(); 
+    header( "location:product.php" );
+    exit(0);
   }else {
     header( "location:login.html" );
     exit(0);
