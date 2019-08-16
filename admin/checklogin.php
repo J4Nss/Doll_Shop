@@ -18,7 +18,11 @@
     header( "location:product.php" );
     exit(0);
   }else {
-    header( "location:login.html" );
+    echo "<script type='text/javascript'>";
+    echo "alert('Login Fail!');";
+    echo "window.location = 'login.html'; ";
+    echo "</script>";
+    // header( "location:login.html" );
     exit(0);
   }
 ?>
