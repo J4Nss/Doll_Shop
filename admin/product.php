@@ -15,10 +15,7 @@
   require("nav.php");
   } 
   ?>
-<<<<<<< HEAD
   <h2 class="title">Doll Stock</h2>
-=======
->>>>>>> 07cd86081ed58cf532bc8565ead28d6326ac18e7
     <div class="row col-12">
       <h2 class="title">Doll Stock</h2>
       <div class="row col-12">
