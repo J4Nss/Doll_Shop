@@ -23,12 +23,12 @@
 		
 	</head>
     <body>		
-		<div id="top-bar" class="container">
+		<!-- <div id="top-bar" class="container">
 			<div class="row">
 				<div class="span4">
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div id="wrapper" class="container">
 			<?php require "nav.php" ?>
 			<section  class="homepage-slider" id="home-slider">
