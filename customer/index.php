@@ -118,16 +118,16 @@
 								<div class="modal-body">
 								<form action="add_product.php" method="post" enctype="multipart/form-data">
 						
-                    <label class="col-lg-3 col-md-3 col-sm-1">Name: </label>
+                    <label class="col-lg-3 col-md-3 col-sm-1">Name </label>
                     <input class="form-control col-lg-8 col-md-8 col-sm-1" type="text" name="name_product">
 										<label class="col-lg-3 col-md-3 col-sm-1">Price: </label>
                     <input class="form-control col-lg-8 col-md-8 col-sm-1" type="number" name="price">
                     <label class="col-lg-3 col-md-3 col-sm-1">Stock: </label>
 										<input class="form-control col-lg-8 col-md-8 col-sm-1" type="number" name="stock">
 										<div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button class="btn btn-primary" type="submit">Add</button>
-                </div>		
+                  	<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  	<button class="btn btn-primary" type="submit">Add</button>
+                		</div>		
 								</form>
                 
               	</div>
