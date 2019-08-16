@@ -15,7 +15,7 @@
     $_SESSION["user"] = $user;
     // print_r ($_SESSION["user"]);
     session_write_close(); 
-    header( "location:customer.php" );
+    header( "location:product.php" );
     exit(0);
   }else {
     header( "location:login.html" );
