@@ -1,16 +1,10 @@
 <section class="navbar main-menu">
-<<<<<<< HEAD
-				<div class="navbar-inner main-menu">				
-					<a href="index.php" class="logo pull-left"><img src="themes/images/logo.png" class="site_logo" alt=""></a>
-					<nav id="menu" class="pull-right">
-=======
 				<div class="navbar-inner main-menu my_nav">	
 					<div class="logo_block">		
 						<a href="index.html" class="logo pull-left"><img src="../img/logo_shop.png" class="logo" alt=""></a>
 						<span class="shop_name">Teddy Shop</span>
 					</div>	
 					<nav id="menu" class="pull-right menu_block">
->>>>>>> 5d6102a8a640420ad956086a1032d459883fb220
 						<ul>
 							<li><a href="./index.php">Home</a>
               <li><a href="./my_order.php">My Order</a>
