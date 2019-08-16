@@ -11,9 +11,24 @@
     <body>
 
 <?php
-// require("../connection.php");
+require("../connection.php");
+
+if($_GET["Id_customer"]==''){ 
+echo "<script type='text/javascript'>"; 
+echo "alert('Error Contact Admin !!');"; 
+echo "window.location = 'customer.php'; "; 
+echo "</script>"; 
+}
+ 
+//รับค่าไอดีที่จะแก้ไข
+$Id_customer = mysqli_real_escape_string($conn,$_GET['Id_customer']);
+ 
+//2. query ข้อมูลจากตาราง: 
+$sql = "SELECT * FROM customer WHERE Id_customer = '$Id_customer' ";
+$result = mysqli_query($conn, $sql) or die ("Error in query: $sql");
+$row = mysqli_fetch_array($result);
+extract($row);
 ?>
-           
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light cus">
 <a class="navbar-brand" href="#">Navbar</a>
@@ -41,55 +56,56 @@
   </div>
 </nav>
 
-
-<br>
-<div id="c">
- <b>Customer Management</b>
-</div>
-
-<?php
-require("../connection.php");
-$query = "SELECT * FROM customer ORDER BY Id_customer asc" or die("Error:"); 
-//3.เก็บข้อมูลที่ query ออกมาไว้ในตัวแปร result . 
-$result = mysqli_query($conn, $query); 
-//4 . แสดงข้อมูลที่ query ออกมา โดยใช้ตารางในการจัดข้อมูล: 
  
-echo "<table class='table table-striped tab'>";
-//หัวข้อตาราง
-echo"<thead>
-    <tr>
-      <th scope='col'>firstname</th>
-      <th scope='col'>lastname</th>
-      <th scope='col'>edit</th>
-      <th scope='col'>delete</th>
-    </tr>
-  </thead>";
-while($row = mysqli_fetch_array($result)) { 
-  echo "<tbody><tr>";
-  echo "<td>" .$row["firstname"] .  "</td> ";  
-  echo "<td>" .$row["lastname"] .  "</td> ";
-  //แก้ไขข้อมูล
-  // echo "<td><a href='customer.php?Id_customer=$row[0]'>
- echo "<td><a href='edit_customer.php?Id_customer=$row[0]'><span class='glyphicon glyphicon-pencil'></span></a></td> ";
+<form action="update_customer.php" method="post" name="updateuser" id="updateuser">
 
-  //ลบข้อมูล
-  echo "<td><a href='delete_customer.php?Id_customer=$row[0]' onclick=\"return confirm('Are you sure to delete')\">
- <span class='glyphicon glyphicon-trash'></span>
-</a></td> ";
-  echo "</tr></tbody>";
-}
-echo "</table>";
+<div class="card" id="up">
+  <div class="card-body"><b>Edit Customer</b></i></legend>
 
-?>
-    </body>
+ <table>
+ <tr><td colspan="2" ><hr></td></tr>
+ <tr>
+ <td ><b>Id_customer : </b></td>
+ <td><br><input type="text" class="form-control" name="Id_customer" size="10" readonly="readonly" maxlength="10" value="<?php echo $Id_customer; ?>"></td>
+ </tr>
+ <tr>
+ <td ><b>firstname : </b></td>
+ <td><br><input type="text" class="form-control" name="firstname" size="40" maxlength="10" value="<?php echo $firstname; ?>"></td>
+ </tr>
+ <tr>
+ <td ><b>lastname : </b></td>
+ <td><br><input type="text" class="form-control" name="lastname" size="40" maxlength="30" value="<?php echo $lastname; ?>"></td>
+ <br></tr>
+ <tr>
+ <td ><b>telephone : </b></td>
+ <td><br><input type="text" class="form-control" name="tel" size="40" maxlength="30" value="<?php echo $tel; ?>"></td>
+ </tr>
+ <tr>
+ <td ><b>address : </b></td>
+ <td><br><input type="text" class="form-control" name="address" size="40" maxlength="7" value="<?php echo $address; ?>"></td>
+ </tr>
+ <tr>
+ <td colspan="2">
+ <hr>
+ <button type="submit" class="btn btn-primary" value="Submit" name="Submit">Submit</button>
+ </td>
+ </tr>
+ </table>
+ </div>
+</div>
+	</div>
+ </form>
+	 </body>
 </html>
 
-
-
-
-
-
-            <style>
+			<style>
+            #up{
+				font-size: 30px;
+				margin-top: 5%;
+				margin-left: 30%;
+				margin-right: 30%;
+			}
+			
             .cus{
             background-color: #E0FFFF !important;
             }
@@ -98,12 +114,10 @@ echo "</table>";
             }
             .dropdown-menu{
               background-color: #E0FFFF !important;
-            }
-            #c{
-              margin-left: 5%;
-              font-size: 30px;
-            }
+			}
+			
             .tab{
               background-color: #DCDCDC !important;
             }
-            </style>
+            
+			</style>
